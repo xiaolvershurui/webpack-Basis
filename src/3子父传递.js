@@ -23,18 +23,18 @@ class A extends React.Component {
     this.state = {a:1,b:"hello"}
   }
 
- hedClick=(c)=>{
+  hedClick=(c)=>{
     this.setState({a:this.state.a+c})
- }
+  }
 
   render() {
 
     return (<div>
         {this.state.a}
-       {/*父组件把自己的方法放到子组件的属性上*/}
-         <B  b={this.hedClick}/>
-       </div>
-      )
+        {/*父组件把自己的方法放到子组件的属性上*/}
+        <B  b={this.hedClick}/>
+      </div>
+    )
   }
 }
 
